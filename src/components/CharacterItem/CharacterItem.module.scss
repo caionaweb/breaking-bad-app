@@ -1,0 +1,79 @@
+@import "../../styles/mixins";
+
+.card {
+  @extend %card-base;
+  position: relative;
+
+  &.active {
+    border-width: 4px;
+    border-color: #2b99d6;
+  }
+
+  &__image {
+    height: 300px;
+    @include response-image;
+  }
+
+  @media (max-width: 768px) {
+    &__image {
+      height: 500px;
+      background-position: top center;
+    }
+  }
+}
+.details {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  min-height: 42px;
+  transition: all 0.3s;
+  background-color: #fcfcfc;
+  cursor: pointer;
+
+  &__title {
+    font-size: 16px;
+  }
+
+  &__content {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: all 1.2s;
+  }
+
+  &:hover {
+    bottom: 0;
+    min-height: 300px;
+    color: #000;
+    background-color: rgba(#fcfcfc, 0.7);
+
+    .details__title {
+      display: none;
+    }
+    .details__content {
+      opacity: 1;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__fact {
+    margin: 0;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  &__label {
+    display: block;
+    font-weight: 400;
+    font-size: 12px;
+    margin-right: auto;
+  }
+}
+
+.fact__item {
+  display: block;
+}

@@ -1,0 +1,14 @@
+@import "src/styles/mixins.scss";
+
+.pagination {
+  text-align: center;
+  @include horizontal-list(20px, #fff);
+
+  &__item {
+    transition: font-weight 0.2s;
+    &_active {
+      font-weight: 700;
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,80 @@
+@import "../../styles/mixins";
+
+.card {
+  @extend %card-base;
+  position: relative;
+
+  &__image {
+    height: 300px;
+    @include response-image;
+  }
+
+  @media (max-width: 768px) {
+    &__image {
+      height: 550px;
+      background-position: top center;
+    }
+  }
+}
+
+.details {
+  position: absolute;
+  bottom: 5%;
+  min-height: 42px;
+  width: 100%;
+  padding: 9px 10px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.4s;
+  background: rgba(45, 104, 63, 0.6);
+  overflow: hidden;
+
+  &__content {
+    position: absolute;
+    left: 0;
+    padding: 0 5px;
+    opacity: 0;
+    transition: all 0.8s;
+  }
+
+  &:hover {
+    min-height: 90%;
+    background: rgba(45, 104, 63, 0.9);
+
+    .title {
+      text-decoration: underline;
+      margin-bottom: 10px;
+    }
+
+    .details__content {
+      opacity: 1;
+
+      &_size {
+        font-size: 16px;
+      }
+
+      p {
+        margin: 5px 0;
+      }
+    }
+  }
+
+  &__title {
+    margin: 0 -10px;
+    font-size: 21px;
+    text-align: center;
+    font-weight: 400;
+    text-shadow: 1px 1px 2px #323030;
+  }
+}
+
+.link {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  &:hover {
+    text-decoration: underline;
+  }
+}

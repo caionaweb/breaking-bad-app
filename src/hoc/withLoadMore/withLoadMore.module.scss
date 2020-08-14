@@ -1,0 +1,25 @@
+.loadmore {
+  width: 100%;
+  text-align: center;
+  &__btn {
+    width: 125px;
+    height: 45px;
+    padding: 8px;
+    background-color: #2c9048;
+    border: none;
+    outline: none;
+    text-align: center;
+    color: #eee;
+    transition: all 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      color: #fff;
+      background-color: #1a7f36;
+    }
+    &:focus,
+    &:active {
+      border: 1px solid #2b99d6;
+    }
+  }
+}

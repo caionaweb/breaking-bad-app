@@ -1,0 +1,27 @@
+.message {
+  text-align: center;
+  margin: 120px 0;
+
+  &__head,
+  &__subhead {
+    margin: 0;
+    margin-top: 25px;
+    color: #ff0000;
+    text-transform: uppercase;
+  }
+
+  &__head {
+    font-size: 28px;
+    font-weight: 900;
+  }
+
+  &__subhead {
+    font-size: 21px;
+    font-weight: 600;
+  }
+
+  &__image {
+    display: block;
+    margin: 0 auto;
+  }
+}
