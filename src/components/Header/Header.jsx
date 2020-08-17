@@ -7,9 +7,9 @@ const Header = () => {
   const [isVisibleMenuButton, toggleMenuButton] = React.useState(false);
 
   const menuRoutes = [
-    ["Episodes", "/", true],
-    ["Characters", "/characters"],
-    ["Quotes", "/quotes"],
+    ["Ep", "/", true],
+    ["Ch", "/characters"],
+    ["Qu", "/quotes"],
   ];
 
   const menuItems = menuRoutes.map(([itemName, route, isExact], index) => {
